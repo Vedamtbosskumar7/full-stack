@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-bg: #F0F5F3;
+  --card-bg: #FFFFFF;
+  --border-color: #D9D9D9;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --status-available: #4CAF50;
+  --status-reserved: #FFC107;
+  --status-processing: #FF9800;
+  --status-completed: #8BC34A;
+  --status-takeaway: #2196F3;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Desktop Layout */
+.desktop-layout {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 65px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  margin: 20px;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Analytics Cards */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 263px);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.analytics-card {
+  box-sizing: border-box;
+  background: #F0F5F3;
+  border: 2px solid #D9D9D9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.analytics-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Charts Section */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Tables Grid */
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 146.06px);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.table-card {
+  box-sizing: border-box;
+  background: #F0F5F3;
+  border: 1.17426px solid #BABABA;
+  border-radius: 7.04556px;
+  height: 126.49px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.table-card:hover {
+  box-shadow: 1px 4px 14px -1px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.table-card.available {
+  background-color: #E8F5E9;
+  border-color: var(--status-available);
+}
+
+.table-card.reserved {
+  background-color: #FFF8E1;
+  border-color: var(--status-reserved);
+}
+
+/* Order Cards */
+.order-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.order-card.processing {
+  background-color: #FFF3E0;
+}
+
+.order-card.completed {
+  background-color: #E8F5E9;
+}
+
+.order-card.takeaway {
+  background-color: #E3F2FD;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  width: 428px;
+  height: 926px;
+  background: #FFFFFF;
+  padding: 2rem 1.5rem;
+}
+
+.mobile-search {
+  width: 368px;
+  height: 50px;
+  background: #F5F5F5;
+  border-radius: 25px;
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+
+.mobile-category-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.mobile-menu-item {
+  width: 174px;
+  height: 154px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.17);
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+/* Filter Styles */
+.filter-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.filter-button.active {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Utility Classes */
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-gray-500 {
+  color: #6B7280;
+}
+
+.bg-white {
+  background-color: #FFFFFF;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
